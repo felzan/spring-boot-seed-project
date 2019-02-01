@@ -1,0 +1,49 @@
+logging:
+  file: seed.log
+  level:
+    root: INFO
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
+      hibernate: ERROR
+management:
+  endpoint:
+    info:
+      enabled: true
+    auditevents:
+      enabled: true
+    beans:
+      enabled: true
+    caches:
+      enabled: true
+    conditions:
+      enabled: true
+    configprops:
+      enabled: true
+    env:
+      enabled: true
+    flyway:
+      enabled: true
+    health:
+      enabled: true
+    httptrace:
+      enabled: true
+    logfile:
+      enabled: true
+    loggers:
+      enabled: true
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    mappings:
+      enabled: true
+  endpoints:
+    web:
+      base-path: '/actuator'
+      exposure:
+        include: '*'
+        exclude: heapdump
+
