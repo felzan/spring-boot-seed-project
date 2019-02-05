@@ -1,3 +1,6 @@
+### SECRET ###
+token.yaml
+
 /target/
 .mvn
 *.log*

@@ -21,9 +21,10 @@ public class AuthorizationFilter extends GenericFilterBean {
     final HttpServletResponse httpResponse = (HttpServletResponse)response;
 
     final String auth = httpRequest.getHeader(HttpHeaders.AUTHORIZATION);
-    if (auth == null || !auth.startsWith("Bearer")) {
-      httpResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Not authorized");
-    }
+//    if (auth == null || !auth.startsWith("Bearer")) {
+//      httpResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Not authorized");
+//      return;
+//    }
     chain.doFilter(request, response);
   }
 

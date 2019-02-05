@@ -21,9 +21,10 @@ public class ContentTypeFilter extends GenericFilterBean {
     final HttpServletRequest req = (HttpServletRequest)request;
     final HttpServletResponse res = (HttpServletResponse)response;
 
-    if (req.getContentType() == null || !req.getContentType().equals(MediaType.APPLICATION_JSON_VALUE)) {
-      res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Content-Type MUST be application/json");
-    }
+//    if (req.getContentType() == null || !req.getContentType().equals(MediaType.APPLICATION_JSON_VALUE)) {
+//      res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Content-Type MUST be application/json");
+//      return;
+//    }
     chain.doFilter(request, response);
   }
 }

@@ -8,10 +8,6 @@ spring:
       max-wait: 20000
       max-active: 50
       max-idle: 20
-  jpa:
-    hibernate:
-      ddl-auto: validate
-
 logging:
   file: seed.log
   level:
@@ -21,7 +17,7 @@ logging:
         web:
           servlet:
             DispatcherServlet: DEBUG
-      hibernate: ERROR
+      hibernate: DEBUG
 management:
   endpoint:
     info:
@@ -60,4 +56,7 @@ management:
       exposure:
         include: '*'
         exclude: heapdump
-
+server:
+  compression:
+    enabled: true
+    min-response-size: 1024 #1KB
