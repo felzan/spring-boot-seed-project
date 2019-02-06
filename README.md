@@ -7,4 +7,10 @@ This is a seed project to create production-ready REST API using the Spring Boot
 - A simple project setup
 - A filter to manage the authentication
 - Actuator endpoints enabled
-
+- Application profiles
+- MySQL connector
+- JDBC
+- Flyway
+- logging
+- Simple Dockerfile
+- Swagger 2
