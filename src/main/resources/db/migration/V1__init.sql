@@ -1,8 +1,12 @@
-CREATE TABLE token
+create table rating
 (
-    id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    token text NOT NULL,
-    expires_at datetime DEFAULT current_timestamp,
-    created_at datetime DEFAULT current_timestamp,
-    updated_at datetime DEFAULT current_timestamp
+	id int auto_increment,
+	customer_id varchar(128) null,
+	account_type int null,
+	rating float not null,
+	comment text null,
+	type_id int null,
+	constraint rating_pk
+		primary key (id)
 );
+
